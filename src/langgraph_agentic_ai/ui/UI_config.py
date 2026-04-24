@@ -30,3 +30,4 @@ class Config:
 
     def get_page_title(self):
         return self._get_required('PAGE_TITLE')
+
