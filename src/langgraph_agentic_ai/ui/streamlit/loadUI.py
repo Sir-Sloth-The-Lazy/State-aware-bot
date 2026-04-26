@@ -33,6 +33,14 @@ class LoadStreamlitUI :
                 
             #Usecase Selection
             self.user_controls['selected_usecase'] = st.selectbox("Select Usecase", usecase_options)
-        
+            
+            if self.user_controls["selected_usecase"] == "Research using Web":
+                # Additional controls for Research using Web use case
+                self.user_controls["TAVILY_API_KEY"] = st.session_state["TAVILY_API_KEY"] = st.text_input("TAVILY API KEY" , type="password")
+
+                #validate TAVILY API key
+                if not self.user_controls["TAVILY_API_KEY"]:
+                    st.warning("⚠️ Please enter your TAVILY API KEY to proceed.")
+
         return self.user_controls
     
