@@ -38,5 +38,9 @@ class LoadStreamlitUI :
                 # Additional controls for Research using Web use case
                 self.user_controls["TAVILY_API_KEY"] = st.session_state["TAVILY_API_KEY"] = st.text_input("TAVILY API KEY" , type="password")
 
+                #validate TAVILY API key
+                if not self.user_controls["TAVILY_API_KEY"]:
+                    st.warning("⚠️ Please enter your TAVILY API KEY to proceed.")
+
         return self.user_controls
     
