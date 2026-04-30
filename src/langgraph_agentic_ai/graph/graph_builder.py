@@ -1,6 +1,7 @@
 from langgraph.graph import StateGraph, START , END
 from src.langgraph_agentic_ai.state.state import State
 from src.langgraph_agentic_ai.nodes.basic_chatbot_node import BasicChatbotNode
+from src.langgraph_agentic_ai.tools.search_tool import get_tools, create_tool_nodes
 
 class GraphBuilder:
     def __init__(self, model):
@@ -24,6 +25,19 @@ class GraphBuilder:
         self.graph_builder.add_node("chatbot", self.basic_chatbot_node.process)
         self.graph_builder.add_edge(START, "chatbot")
         self.graph_builder.add_edge("chatbot", END)
+    
+    def chatbot_with_tools_build_graph(self):
+        """
+        Builds a chatbot graph that incorporates tools for enhanced functionality.
+        This method initializes the chatbot node and integrates it with tool nodes created from the provided tools.
+        The graph is structured to allow the chatbot to utilize the tools during conversations, 
+        enabling more complex interactions and responses.
+
+        Returns:
+            StateGraph: The constructed graph representing the chatbot's conversational flow with tool integration.
+        """
+        
+        
 
     def setup_graph(self, usecase):
         """
