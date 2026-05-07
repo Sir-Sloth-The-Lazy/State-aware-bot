@@ -2,7 +2,7 @@
 
 # State-Aware Agentic AI Chatbot
 
-**A modular, state-aware conversational AI platform built with LangGraph, LangChain, and Streamlit**
+**A modular, state-aware conversational AI platform built with LangGraph, LangChain and Streamlit**
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![LangGraph](https://img.shields.io/badge/LangGraph-Latest-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)](https://langchain-ai.github.io/langgraph/)
