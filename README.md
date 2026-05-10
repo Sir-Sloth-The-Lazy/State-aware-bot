@@ -1,6 +1,6 @@
 <div align="center">
 
-# State-Aware Agentic AI Chatbot
+# State-Aware Agentic AI Worker
 
 **A modular, state-aware conversational AI platform built with LangGraph, LangChain and Streamlit**
 
