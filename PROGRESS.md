@@ -53,11 +53,11 @@ No XP has been awarded. Mark a row complete only with recorded evidence. Histori
 
 ## Git track (side campaign, see `GIT_ROADMAP.md`)
 
-No ADK XP. Rank: **Unranked**. Next: **G1 (first commit)**: extend `.gitignore` before committing anything; currently it only ignores `.vscode`.
+No ADK XP. Rank: **Unranked**. Next: **G2 (first push)**: one local commit (`7ad2cd6`) is not yet pushed; push it, then check `git status` says up to date. Then G3 (reading history).
 
 | Belt | Scenarios | Done |
 | --- | --- | --- |
-| White (Act I) | G0–G10, Git Boss 1 | 1 / 12 |
+| White (Act I) | G0–G10, Git Boss 1 | 2 / 12 |
 | Green (Act II) | G11–G16, Git Boss 2 | 0 / 7 |
 | Brown (Act III) | G17–G21, Git Boss 3 | 0 / 6 |
 | Black (Act IV) | G22–G28, Git Boss 4 | 0 / 8 |
@@ -65,6 +65,7 @@ No ADK XP. Rank: **Unranked**. Next: **G1 (first commit)**: extend `.gitignore` 
 Completed scenarios (with evidence):
 
 - **G0, identity and tooling (2026-11-01).** Evidence: `gh auth status` pasted by the user (logged in as `Sir-Sloth-The-Lazy`, HTTPS, scopes gist/read:org/repo/workflow). `git config --show-origin user.email` run in this repo prints `anupamasinghsrinet1976@gmail.com` from the global `~/.gitconfig`; the user confirmed this is the intended address (their statement, not independently verifiable). `pull.rebase=true` is set globally. `core.editor` is not set (optional). No `includeIf` configured (not needed for a single identity).
+- **G1, first commit done properly (2026-11-01).** Evidence (inspected by Claude): `git log` shows 9 small commits, all authored with the intended identity; `.gitignore` covers `.env`, `.venv/`, `__pycache__/`, `*.pyc`, `*.db`, `.DS_Store`, `.adk/`, `.vscode`, `.idea`; `git check-ignore -v .env` names `.gitignore:2`; `git ls-files` contains no secrets or generated files. Style notes (not blockers): commit subjects mix `add:`, `Add :`, `update :`; "exclude gitignore" describes the opposite of what the commit did. `uv.lock` was committed separately from the `pyproject.toml` change that it belongs to.
 
 Known repo state (2026-11-01): `main` has no commits; `origin` = `github.com/Sir-Sloth-The-Lazy/State-aware-bot`; the repo is inside a OneDrive-synced folder (see the G0 note).
 
